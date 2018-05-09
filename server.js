@@ -1,9 +1,12 @@
-import express from 'express'
-import bodyParser from 'body-parser'
+const express = recquire('express')
+const bodyParser = recquire('body-parser')
 
-import mailer from './mailer'
+const mailer = recquire('./mailer')
 
 const app = express()
+
+// serve the react app files
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

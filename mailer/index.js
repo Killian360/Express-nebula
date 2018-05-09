@@ -1,6 +1,5 @@
-import nodemailer from 'nodemailer'
-
-import config from './config'
+const nodemailer = recquire('nodemailer')
+const config = recquire('./config')
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
