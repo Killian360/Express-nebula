@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const mailer = require('./mailer')
+import mailer from ('./mailer')
 
 const app = express()
 
@@ -21,7 +21,7 @@ app.get('*', (req, res) => {
 })
 
 app.post('/api/contact', (req, res) => {
-  const { email = "", subject = "", message = "" } = req.body
+  const { email = '', subject = '', message = '' } = req.body
   mailer({ email, subject, text: message }).then(() => {
     return res.json({"validate": "true"});
   }).catch((error) => {
