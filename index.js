@@ -1,7 +1,7 @@
-const express = recquire('express')
-const bodyParser = recquire('body-parser')
+const express = require('express')
+const bodyParser = require('body-parser')
 
-const mailer = recquire('./mailer')
+const mailer = require('./mailer')
 
 const app = express()
 
