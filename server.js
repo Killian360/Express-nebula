@@ -20,7 +20,7 @@ app.get('*', (req, res) => {
   res.send('Server is working. Please post at "/contact" to submit a message.')
 })
 
-app.post('/api/contact', (req, res) => {
+app.post('https://api-creative-nebula.herokuapp.com/api/contact', (req, res) => {
   const { email = "", subject = "", message = "" } = req.body
   mailer({ email, subject, text: message }).then(() => {
     return res.json({"validate": "true"});
