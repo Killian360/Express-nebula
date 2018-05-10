@@ -8,7 +8,7 @@ const app = express()
 // serve the react app files
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "www.jeremy-charras.fr");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
