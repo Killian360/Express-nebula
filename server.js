@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-import mailer from ('./mailer')
+import mailer from "./mailer"
 
 const app = express()
 
